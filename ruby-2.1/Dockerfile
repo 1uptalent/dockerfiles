@@ -13,10 +13,10 @@ RUN apt-get install -y libgdbm-dev
 ADD irbrc /.irbrc
 
 # install ruby from sources
-ADD http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0.tar.bz2 /
-RUN cd ruby-2.1.0.tar.bz2/ruby-2.1.0 && ./configure --disable-install-doc --with-openssl-dir=/usr/bin && make && make install
+ADD http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0.tar.bz2 /build
+RUN cd /build/ruby-2.1.0 && ./configure --disable-install-doc --with-openssl-dir=/usr/bin && make && make install
 # cleanup
-RUN rm -rf ruby-2.1.0.tar.bz2
+RUN rm -rf /build
 
 # install Bundler
 RUN gem install bundler --version 1.5.2
