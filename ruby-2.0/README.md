@@ -9,4 +9,4 @@ Check the `Dockerfile` for the exact versions.
 
 This will get you into a nice `irb` shell with history and completion.
 
-    docker run -i -t 1uptalent/ruby-2.0 irb
+    docker run -i -t -rm 1uptalent/ruby-2.0 irb
