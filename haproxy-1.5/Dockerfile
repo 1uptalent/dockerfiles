@@ -15,5 +15,3 @@ RUN cd /build/haproxy-1.5-dev21 && make TARGET=linux2628 CPU=native USE_PCRE=1 U
 RUN rm -rf /build
 
 VOLUME  ["/config"]
-
-ADD README.md ./README.md
