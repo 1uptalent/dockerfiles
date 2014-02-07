@@ -6,7 +6,6 @@ if [[ -z "$CONFIG" ]]; then
   exit 1
 fi
 
-CONFIG=${CONFIG:-/config/haproxy.cfg}
 PIDFILE=/haproxy/haproxy.pid
 
 haproxy -D -f $CONFIG -p $PIDFILE
