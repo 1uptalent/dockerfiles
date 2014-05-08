@@ -1,4 +1,4 @@
-FROM 1uptalent/docker-registry:0.6.5
+FROM samalba/docker-registry:lastest
 
 ADD config.yml docker-registry/config/config.yml
 
