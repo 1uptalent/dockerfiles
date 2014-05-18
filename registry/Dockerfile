@@ -1,4 +1,4 @@
-FROM samalba/docker-registry:lastest
+FROM samalba/docker-registry:latest
 
 ADD config.yml docker-registry/config/config.yml
 
