@@ -8,9 +8,8 @@ RUN apt-get install -y libssl-dev
 RUN apt-get install -y libpcre3-dev
 
 # install from sources
-RUN mkdir /build
-ADD http://haproxy.1wt.eu/download/1.5/src/devel/haproxy-1.5-dev21.tar.gz /build
-RUN cd /build/haproxy-1.5-dev21 && make TARGET=linux2628 CPU=native USE_PCRE=1 USE_OPENSSL=1 USE_ZLIB=1 && make install
+ADD http://haproxy.1wt.eu/download/1.5/src/devel/haproxy-1.5-dev25.tar.gz /
+RUN tar xf haproxy-1.5-dev25.tar.gz && cd haproxy-1.5-dev25 && make TARGET=linux2628 CPU=native USE_PCRE=1 USE_OPENSSL=1 USE_ZLIB=1 && make install && cd / && rm -rf haproxy-1.5-dev25
 # cleanup
 RUN rm -rf /build
 
