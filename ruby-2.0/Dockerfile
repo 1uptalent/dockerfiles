@@ -1,4 +1,4 @@
-FROM ubuntu:12.04
+FROM debian:wheezy
 MAINTAINER docker@1uptalent.com
 
 # install ruby dependencies

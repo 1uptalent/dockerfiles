@@ -1,8 +1,5 @@
-FROM ubuntu:12.04
+FROM debian:wheezy
 MAINTAINER docker@1uptalent.com
-
-# Add UNIVERSE (not in the trusted-build version of ubuntu 12.04)
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 
 # install ruby dependencies
 RUN apt-get update
